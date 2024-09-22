@@ -13,8 +13,8 @@ import { useLocation } from "react-router-dom";
 const Wrapper = styled.div`
 	display: grid;
 	place-items: center;
-	min-height: 100vh;
-	background: url(${bg}) no-repeat center center;
+	height: 100vh;
+	background: url(${bg}) no-repeat center center fixed;
 	background-size: cover;
 	overflow: hidden;
   
@@ -22,7 +22,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
   }
 `;
 
@@ -55,8 +54,11 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     width: 90%;
-    height: calc(100vh - 120px) !important;
-    margin: 120px 0;
+    // height: calc(100vh - 120px) !important;
+	height: 60vh;
+    max-height: calc(100vh - 120px);
+    margin: 110px 0 0 0;
+    resize: none;
   }
 `;
 
