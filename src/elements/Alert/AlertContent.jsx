@@ -29,7 +29,7 @@ const Container = styled.div`
 	transition: opacity 0.3s ease-in-out;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	z-index: 5;
+	z-index: 5000;
 	.hidden {
 		opacity: 0;
 		transition: opacity 0.15s;
