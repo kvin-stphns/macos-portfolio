@@ -21,12 +21,12 @@ const Wrapper = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-  
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 `;
 
 const dimensionConstraints = css`
@@ -47,7 +47,7 @@ const emulatorDimensions = css`
 
 const Container = styled.div`
 	width: fit-content;
-	border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
+	border-radius: 0.6rem;
 	box-shadow: ${theme.windowShadow} 0px 1px 4px;
 	resize: ${props => (props.resizable ? `both` : `none`)};
 	overflow: hidden;
@@ -55,15 +55,15 @@ const Container = styled.div`
 	backdrop-filter: blur(1rem);
 	background: ${theme.bodyBgWithOpacity};
 	${props => props.height && `height: ${props.height}`}
+	max-height: 90vh;
 
-  @media (max-width: 768px) {
-    width: 90%;
-    // height: calc(100vh - 120px) !important;
-	height: 60vh;
-    max-height: calc(100vh - 120px);
-    margin: 110px 0 0 0;
-    resize: none;
-  }
+	@media (max-width: 768px) {
+		width: 90%;
+		height: ${props => props.height || '70vh'};
+		max-height: 60vh;
+		margin: 0;
+		resize: none;
+	}
 `;
 
 const Default = props => {

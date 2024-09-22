@@ -18,7 +18,7 @@ const DockContent = () => {
 	return (
 		<div className="main-contain">
 			<div className="container">
-				<div className="dock">
+				<div className="dock" style={{ zIndex: 1001 }}>
 					<span></span>
 					<div className="dock-nav">
 						<ul>
