@@ -5,6 +5,7 @@ import WifiIcon from "@static/wifi.png";
 import ControlCenterIcon from "@static/controlcenter.png";
 import NotifyIcon from "@static/NotifyIcon.png";
 // import IcloudIcon from "@static/IcloudIcon.png";
+import { useEffect, useState } from "react";
 
 const formatMinutes = min => {
 	return min < 10 ? "0" + min : min;
@@ -48,16 +49,24 @@ const convertToReadableDate = timestamp => {
 };
 
 const MenuContent = props => {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+
+		checkMobile();
+		window.addEventListener("resize", checkMobile);
+
+		return () => window.removeEventListener("resize", checkMobile);
+	}, []);
+
 	const menuItems = [
 		[
 			<img src={AppleIcon} alt="Apple logo" className="apple" />,
 			props.programName,
-			"File",
-			"Edit",
-			"View",
-			"Chat",
-			"Window",
-			"Help",
+			...(isMobile ? [] : ["File", "Edit", "View", "Chat", "Window", "Help"]),
 		],
 		[
 			// <img src={IcloudIcon} alt="Cloud icon" className="right-icon" />,
@@ -72,6 +81,7 @@ const MenuContent = props => {
 			convertToReadableDate(Date.now()),
 		],
 	];
+
 	return (
 		<div className="menu-bar">
 			<div className="app-menus">
