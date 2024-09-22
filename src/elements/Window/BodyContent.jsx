@@ -11,10 +11,12 @@ const Wrapper = styled.div`
 	height: 100%;
 	border-radius: 0 0 0.3rem 0.3rem;
 	border: 1px solid ${theme.bodyBorder};
+	overflow: auto;
 
 	@media (max-width: 768px) {
 		min-height: unset;
 		height: calc(100% - 2rem);
+		max-height: calc(100vh - 120px);
 	}
 `;
 

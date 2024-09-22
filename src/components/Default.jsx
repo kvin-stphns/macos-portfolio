@@ -14,9 +14,13 @@ const Wrapper = styled.div`
 	display: grid;
 	place-items: center;
 	height: 100vh;
+	width: 100vw;
 	background: url(${bg}) no-repeat center center fixed;
 	background-size: cover;
 	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
   
   @media (max-width: 768px) {
     display: flex;
