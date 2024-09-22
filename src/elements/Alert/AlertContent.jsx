@@ -14,19 +14,19 @@ const Wrapper = styled.div`
 const Container = styled.div`
 	position: absolute;
 	display: flex;
-	top: 0;
-	margin: 1rem;
+	flex-direction: column;
+	top: 1rem;
+	right: 1rem;
 	background: ${theme.containerBg};
 	min-height: 5rem;
-	width: 25rem;
+	width: 20rem;
 	border-radius: 1rem;
 	box-shadow: rgba(14, 30, 37, 0.2) 0px 0px 10px 0px,
 		inset rgba(207, 229, 255, 0.2) 1px 1px 5px 0px;
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
 		Roboto, "Helvetica Neue", Arial, sans-serif;
-	right: -30rem;
 	cursor: default;
-	transition: right 0.7s cubic-bezier(0.64, -0.5, 0.16, 1);
+	transition: opacity 0.3s ease-in-out;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	z-index: 5;
@@ -95,7 +95,7 @@ const Title = styled.div`
 const Time = styled.div`
 	margin-left: auto;
 	font-size: 1rem;
-	padding-right: 0.25rem;
+	padding-right: 2rem;
 `;
 
 const ContentBody = styled.div`
@@ -114,7 +114,7 @@ const AlertContent = ({ type }) => {
 	useEffect(() => {
 		switch (type) {
 			case "hideHelp":
-				setTextContent("Type help to get started & act like you're in a terminal!");
+				setTextContent("Type help to get started!");
 				break;
 			case "qemu":
 				setTextContent(
@@ -133,7 +133,7 @@ const AlertContent = ({ type }) => {
 	}, []);
 	useEffect(() => {
 		if (alertHidden) {
-			containerRef.current.classList.remove("showAlert");
+			containerRef.current.style.opacity = "0";
 			localStorage.setItem(`alert__${type}`, true);
 		}
 		//eslint-disable-next-line
@@ -141,7 +141,7 @@ const AlertContent = ({ type }) => {
 	useEffect(() => {
 		let help = localStorage.getItem(`alert__${type}`);
 		if (!help && source && !alertHidden) {
-			containerRef.current.classList.add("showAlert");
+			containerRef.current.style.opacity = "1";
 		}
 		//eslint-disable-next-line
 	}, [source]);
