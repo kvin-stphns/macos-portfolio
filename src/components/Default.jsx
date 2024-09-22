@@ -26,6 +26,7 @@ const Wrapper = styled.div`
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: center;
+		top: -55px;
 	}
 `;
 
