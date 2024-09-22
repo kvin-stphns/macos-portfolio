@@ -17,6 +17,13 @@ const Wrapper = styled.div`
 	background: url(${bg}) no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
 `;
 
 const dimensionConstraints = css`
@@ -45,6 +52,12 @@ const Container = styled.div`
 	backdrop-filter: blur(1rem);
 	background: ${theme.bodyBgWithOpacity};
 	${props => props.height && `height: ${props.height}`}
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: calc(100vh - 120px) !important;
+    margin: 60px 0;
+  }
 `;
 
 const Default = props => {

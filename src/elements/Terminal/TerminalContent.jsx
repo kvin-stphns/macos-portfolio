@@ -20,6 +20,10 @@ const Wrapper = styled(SimpleBarReact)`
 	width: 100%;
 	max-height: 80vh;
 	overflow-x: hidden;
+
+	@media (max-width: 768px) {
+		max-height: calc(100vh - 120px);
+	}
 `;
 
 const Line = styled(SimpleBarReact)`
