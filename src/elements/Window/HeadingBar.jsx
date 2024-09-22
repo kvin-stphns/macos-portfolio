@@ -23,6 +23,10 @@ const Wrapper = styled.div`
 	box-shadow: inset #f5f5f5 0px 2px 1px, inset #d5d5d5 0 -2px 2px;
 	user-select: none;
 	cursor: move;
+
+	@media (max-width: 768px) {
+		height: 1.75rem;
+	}
 `;
 
 const DotContainer = styled.div`
@@ -59,6 +63,12 @@ const StyledDot = styled.div`
 			background: ${props => props.variant && props.variant.darken(0.4)};
 		}
 	}
+
+	@media (max-width: 768px) {
+		height: 0.85rem;
+		width: 0.85rem;
+		margin: 0 0 0 0.5rem;
+	}
 `;
 
 const TitleContainer = styled.div`
@@ -72,16 +82,25 @@ const Title = styled.p`
 	letter-spacing: -0.25px;
 	font-size: 1rem;
 	font-weight: 600;
-	overflow: hidden;
+	overflow: scrollable;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	margin: 0 6rem 0 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 0.8rem;
+		margin: 0 4rem 0 0.75rem;
+	}
 `;
 
 const Icon = styled.img`
 	height: 1.2rem;
 	vertical-align: middle;
 	padding: 0 0.2rem 1px 0;
+
+	@media (max-width: 768px) {
+		height: 1rem;
+	}
 `;
 
 const Dot = props => {
