@@ -23,9 +23,9 @@ const Wrapper = styled.div`
 	left: 0;
 
 	@media (max-width: 768px) {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
 	}
 `;
 
