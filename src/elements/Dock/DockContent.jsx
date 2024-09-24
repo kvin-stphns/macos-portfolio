@@ -12,7 +12,7 @@ import WiseIcon from "@static/cow.png";
 import { Link } from "react-router-dom";
 // import { useDockStore } from "@contexts/Dock/Dock";
 import DevopsIcon from "@static/DevopsIcon.png";
-import mIcon from "@static/mIcon.jpg";
+import notion from "@static/notion.982x1024.png";
 
 const DockContent = () => {
 	return (
@@ -52,11 +52,11 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<a href="https://minimalinfo.vercel.app/" target="_blank">
-								<li data-title="Minimal Info">
+							<a href="https://kevinstephens.notion.site/Portfolio-747b27d3451a4bbe99d4ca8b7e25aa32" target="_blank">
+								<li data-title="Notion Portfolio">
 									<img
 										src
-										={mIcon}
+										={notion}
 										className="img-fluid"
 										alt="mac"
 									/>

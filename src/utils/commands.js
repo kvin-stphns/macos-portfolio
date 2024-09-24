@@ -101,14 +101,14 @@ let commandList = [
 		name: ["projects", "./projects", "projects.app", "./projects.app"],
 		// action: { PROJECTS: "" },
 		action: false,
-		response: 'Page Under Development 🚧🔨 | Until then Visit: <a href="https://minimalinfo.vercel.app/">"minimalinfo" to checkout my projects</a>',
+		response: 'Page Under Development 🚧🔨 | Until then Visit: <a href="https://kevinstephens.notion.site/Portfolio-747b27d3451a4bbe99d4ca8b7e25aa32">"My Notion portfolio" to checkout my projects</a>',
 		subPathStrict: [false],
 		description: "checkout my projects",
 	},
 	{
 		name: ["whoami"],
 		action: true,
-		response: "Hi there! My name is Aditya Sharma and I am a driven and passionate third year Btech student with a strong foundation in programming languages such as Java, C++, and Python. I have also gained valuable experience in cloud computing and DevOps, specifically using tools and technologies like Docker, Kubernetes, and ArgoCD. I am deeply interested in web development and open source projects, and have had the opportunity to work on a number of real-life projects that have allowed me to apply my skills and problem-solving abilities. In my free time, you can find me on my GitHub profile, https://github.com/adityassharma-ss, where I actively contribute to and collaborate on various open source projects. I am always seeking to learn and grow as a developer, and am excited to see where my interests and skills in cloud computing and DevOps will take me in the future. I am eager to apply my knowledge and abilities to meaningful projects and make a positive impact in the tech industry.",
+		response: "Hi there! My name is Kevin Stephens, a graduate student about to graduate with an MSc in Computer Science from the University of London, Birkbeck. I am passionate about creative coding and proficient in React, with a strong background in fullstack development, frontend development, and various web technologies including Gatsby, CRA, and Next. I have experience in digital design, prototyping, and wireframing, and I am skilled in using tools like Adobe Creative Suite, VS Code, IntelliJ, and more. I have held roles such as Chief Innovation Officer at Building Sustainable Borders, where I led website revitalization and innovation strategy, and Creative Marketing Specialist at Lighthouse Publications, where I developed digital visual assets and managed social media platforms. I am eager to apply my diverse skill set to meaningful projects and make a positive impact in the tech industry. You can find more about my work on my website, kevinstephens.dev.",
 		subPathStrict: [false],
 		description:
 			"displays my information",
