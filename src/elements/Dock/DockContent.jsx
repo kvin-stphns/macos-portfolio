@@ -8,7 +8,7 @@ import CodeIcon from "@static/code.png";
 import GithubIcon from "@static/github.png";
 import FolderIcon from "@static/folder.png";
 import NothingIcon from "@static/NothingIcon.png";
-import WiseIcon from "@static/cow.png";
+import ccp from "@static/CCP777.png";
 import { Link } from "react-router-dom";
 // import { useDockStore } from "@contexts/Dock/Dock";
 import DevopsIcon from "@static/DevopsIcon.png";
@@ -43,7 +43,7 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<Link to="/git">
+							{/* <Link to="/git">
 								<li data-title="Git Log">
 									<img
 										src={GithubIcon}
@@ -51,7 +51,17 @@ const DockContent = () => {
 										alt="mac"
 									/>
 								</li>
-							</Link>
+							</Link> */}
+							<a href="https://github.com/kvin-stphns" target="_blank">
+								<li data-title="Github">
+									<img
+										src
+										={GithubIcon}
+										className="img-fluid"
+										alt="mac"
+									/>
+								</li>
+							</a>
 							<a href="https://kevinstephens.notion.site/Portfolio-747b27d3451a4bbe99d4ca8b7e25aa32" target="_blank">
 								<li data-title="Notion Portfolio">
 									<img
@@ -62,17 +72,17 @@ const DockContent = () => {
 									/>
 								</li>
 							</a>
-							<a href="https://wisecow.vercel.app/" target="_blank">
-								<li data-title="Wisecow">
+							<a href="https://creative-care-package-strapi.vercel.app/" target="_blank">
+								<li data-title="Creative Care Package">
 									<img
 										src
-										={WiseIcon}
+										={ccp}
 										className="img-fluid"
 										alt="mac"
 									/>
 								</li>
 							</a>
-							<a href="https://github.com/adityassharma-ss/DevOps" target="_blank">
+							{/* <a href="https://github.com/adityassharma-ss/DevOps" target="_blank">
 								<li data-title="My DevOps Portal">
 									<img
 										src
@@ -81,7 +91,7 @@ const DockContent = () => {
 										alt="mac"
 									/>
 								</li>
-							</a>
+							</a> */}
 							<div className="separator" />
 							<a>
 							<Link to="/resume">
