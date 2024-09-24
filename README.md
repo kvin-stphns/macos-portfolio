@@ -37,7 +37,7 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username/your_repo.git
+   git clone https://github.com/kvin-stphns/macos-porfolio.git
    ```
 2. Install NPM packages
    ```sh
@@ -64,5 +64,5 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 Kevin Stephens - [kvin.stphns@gmail.com](mailto:kvin.stphns@gmail.com)
 
-Project Link: [https://github.com/your_username/your_repo](https://github.com/your_username/your_repo)
+Project Link: [https://github.com/kvin-stphns/macos-porfolio](https://github.com/kvin-stphns/macos-porfolio)
 
