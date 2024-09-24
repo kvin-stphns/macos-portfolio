@@ -55,6 +55,7 @@ const Container = styled.div`
 	${props => (!props.isEmulator ? dimensionConstraints : emulatorDimensions)}
 	backdrop-filter: blur(1rem);
 	background: ${theme.bodyBgWithOpacity};
+	height: 80%;
 	${props => props.height && `height: ${props.height}`}
 	max-height: 90vh;
 
