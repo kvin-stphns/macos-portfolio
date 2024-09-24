@@ -17,6 +17,6 @@
 	"display": "standalone",
 	"theme_color": "#000000",
 	"background_color": "#ffffff",
-	"permissions": ["https://aditya.com"],
-	"host_permissions": ["https://aditya.com/*"]
+	"permissions": ["https://kevinstephens.dev"],
+	"host_permissions": ["https://kevinstephens.dev/*"]
 }
