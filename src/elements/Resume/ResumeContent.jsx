@@ -11,11 +11,11 @@ const Iframe = styled.iframe`
 const ResumeContent = ({ title, content }) => {
     return (
         <BodyContent>
-           <iframe src="https://drive.google.com/file/d/1SH_lZGXx4qAJN128_Q18yNozmpMIjcyF/preview"
+           <iframe src="https://drive.google.com/file/d/1BElXUUIEOLPx-94hRZL7Qz2TsRxH7yU0/preview"
            width="100%"
            height="100%"
            frameborder="0"
-           title="Aditya's Resume"
+           title="Kevin's Resume"
            >
            </iframe>
         </BodyContent>

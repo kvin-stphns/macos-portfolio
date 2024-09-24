@@ -7,6 +7,7 @@ import bg from "@static/bg5original.jpg";
 import theme from "@styles/theme";
 import AlertContent from "@elements/Alert/AlertContent";
 import MenuContent from "@elements/Menu/MenuContent";
+import DockContent from "@elements/Dock/DockContent";
 import { useLocation } from "react-router-dom";
 
 const ContactContent = lazy(() => import("@elements/Contact/ContactContent"));
@@ -75,6 +76,7 @@ const Default = (props) => {
         </Draggable>
       </Wrapper>
       <Footer>Simple component</Footer>
+      <DockContent />
     </>
   );
 };
