@@ -95,7 +95,7 @@ let commandList = [
 		action: true,
 		response: 'Visit: <a href="https://www.linkedin.com/in/kvinstphns/">LinkedIn</a>',
 		subPathStrict: [false],
-		description: "checkout mylinkedIn profile",
+		description: "checkout my linkedIn profile",
 	  },
 	{
 		name: ["projects", "./projects", "projects.app", "./projects.app"],
