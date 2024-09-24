@@ -88,3 +88,25 @@
 	display: flex !important;
 	align-items: center;
   }
+
+@media (max-width: 768px) {
+  .menu-bar .right-side > div {
+    margin-right: 0.5rem;
+  }
+
+  .menu-bar .right-side > div:last-child {
+    margin-right: 0.5rem;
+  }
+
+  .menu-bar .right-side > div img {
+    padding: 0.1rem;
+  }
+
+  .menu-bar .right-side > div:nth-child(4) img {
+    padding: 0.1rem;
+  }
+
+  .menu-bar .right-side > div .time {
+    margin-left: 0.2em;
+  }
+}

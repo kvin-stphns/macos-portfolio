@@ -36,13 +36,17 @@ const convertToReadableDate = timestamp => {
 		"Dec",
 	];
 	const currentDate = new Date(timestamp);
+	const hours = currentDate.getHours();
+	const minutes = currentDate.getMinutes();
+	const ampm = hours >= 12 ? 'PM' : 'AM';
+	const formattedHours = hours % 12 || 12;
+
 	return (
 		<>
 			{shortenedDaysOfTheWeek[currentDate.getDay()]}{" "}
 			{currentDate.getDate()} {shortenedMonth[currentDate.getMonth()]}{" "}
 			<span className="time">
-				{currentDate.getHours()}:
-				{formatMinutes(currentDate.getMinutes())}
+				{formattedHours}:{formatMinutes(minutes)} {ampm}
 			</span>
 		</>
 	);
@@ -50,6 +54,7 @@ const convertToReadableDate = timestamp => {
 
 const MenuContent = props => {
 	const [isMobile, setIsMobile] = useState(false);
+	const [currentTime, setCurrentTime] = useState(Date.now());
 
 	useEffect(() => {
 		const checkMobile = () => {
@@ -59,7 +64,14 @@ const MenuContent = props => {
 		checkMobile();
 		window.addEventListener("resize", checkMobile);
 
-		return () => window.removeEventListener("resize", checkMobile);
+		const timer = setInterval(() => {
+			setCurrentTime(Date.now());
+		}, 1000);
+
+		return () => {
+			window.removeEventListener("resize", checkMobile);
+			clearInterval(timer);
+		};
 	}, []);
 
 	const menuItems = [
@@ -69,16 +81,11 @@ const MenuContent = props => {
 			...(isMobile ? [] : ["File", "Edit", "View", "Chat", "Window", "Help"]),
 		],
 		[
-			// <img src={IcloudIcon} alt="Cloud icon" className="right-icon" />,
 			<img src={BatteryIcon} alt="Battery icon" className="right-icon" />,
 			<img src={WifiIcon} alt="Wifi icon" className="right-icon" />,
-			<img
-				src={ControlCenterIcon}
-				alt="Control Center icon"
-				className="right-icon"
-			/>,
+			 ...(!isMobile ? [<img src={ControlCenterIcon} alt="Control Center icon" className="right-icon" />] : []),
 			<img src={NotifyIcon} alt="Notify icon" className="right-icon" />,
-			convertToReadableDate(Date.now()),
+			convertToReadableDate(currentTime),
 		],
 	];
 
@@ -87,30 +94,30 @@ const MenuContent = props => {
 			<div className="app-menus">
 				{menuItems[0].map((item, index) => {
 					return (
-						<div
-							className={`${
-								typeof item !== "string" ? `img-container` : ``
-							}`}
-							key={index}
-						>
-							{item}
-						</div>
+							<div
+								className={`${
+									typeof item !== "string" ? `img-container` : ``
+								}`}
+								key={index}
+							>
+								{item}
+							</div>
 					);
 				})}
 			</div>
 			<div className="right-side">
 				{menuItems[1].map((item, index) => {
 					return (
-						<div
-							className={`${
-								index !== menuItems[1].length - 1
-									? `img-container`
-									: ``
-							}`}
-							key={index}
-						>
-							{item}
-						</div>
+							<div
+								className={`${
+									index !== menuItems[1].length - 1
+										? `img-container`
+										: ``
+								}`}
+								key={index}
+							>
+								{item}
+							</div>
 					);
 				})}
 			</div>
