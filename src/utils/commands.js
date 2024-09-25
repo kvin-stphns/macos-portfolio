@@ -77,6 +77,30 @@ let commandList = [
 		description: "view my resume",
 	},
 	{
+		name: ["whoami"],
+		action: true,
+		response: "Hi there! My name is Kevin Stephens, a graduate student about to graduate with an MSc in Computer Science from the University of London, Birkbeck. I am passionate about creative coding and proficient in React, with a strong background in fullstack development, frontend development, and various web technologies including Gatsby, CRA, and Next. I have experience in digital design, prototyping, and wireframing, and I am skilled in using tools like Adobe Creative Suite, VS Code, IntelliJ, and more. I have held roles such as Chief Innovation Officer at Building Sustainable Borders, where I led website revitalization and innovation strategy, and Creative Marketing Specialist at Lighthouse Publications, where I developed digital visual assets and managed social media platforms. I am eager to apply my diverse skill set to meaningful projects and make a positive impact in the tech industry. You can find more about my work on my website, kevinstephens.dev.",
+		subPathStrict: [false],
+		description:
+			"displays my information",
+	},
+	{
+		name: ["fetchme"],
+		action: false,
+		response: `<pre>${neofetch}</pre>`,
+		subPathStrict: [false],
+		description:
+			"fetches my information in a cool way", 
+	},
+	{
+		name: ["projects", "./projects", "projects.app", "./projects.app"],
+		// action: { PROJECTS: "" },
+		action: false,
+		response: 'Page Under Development 🚧🔨 | Until then Visit: <a href="https://kevinstephens.notion.site/Portfolio-747b27d3451a4bbe99d4ca8b7e25aa32">"My Notion portfolio" to checkout my projects</a>',
+		subPathStrict: [false],
+		description: "checkout my projects",
+	},
+	{
 		name: ["x", "twitter"],
 		action: true,
 		response: 'Visit: <a href="https://x.com/KevinSteph18155">X.com/KevinSteph18155</a>',
@@ -98,30 +122,6 @@ let commandList = [
 		description: "checkout my linkedIn profile",
 	  },
 	{
-		name: ["projects", "./projects", "projects.app", "./projects.app"],
-		// action: { PROJECTS: "" },
-		action: false,
-		response: 'Page Under Development 🚧🔨 | Until then Visit: <a href="https://kevinstephens.notion.site/Portfolio-747b27d3451a4bbe99d4ca8b7e25aa32">"My Notion portfolio" to checkout my projects</a>',
-		subPathStrict: [false],
-		description: "checkout my projects",
-	},
-	{
-		name: ["whoami"],
-		action: true,
-		response: "Hi there! My name is Kevin Stephens, a graduate student about to graduate with an MSc in Computer Science from the University of London, Birkbeck. I am passionate about creative coding and proficient in React, with a strong background in fullstack development, frontend development, and various web technologies including Gatsby, CRA, and Next. I have experience in digital design, prototyping, and wireframing, and I am skilled in using tools like Adobe Creative Suite, VS Code, IntelliJ, and more. I have held roles such as Chief Innovation Officer at Building Sustainable Borders, where I led website revitalization and innovation strategy, and Creative Marketing Specialist at Lighthouse Publications, where I developed digital visual assets and managed social media platforms. I am eager to apply my diverse skill set to meaningful projects and make a positive impact in the tech industry. You can find more about my work on my website, kevinstephens.dev.",
-		subPathStrict: [false],
-		description:
-			"displays my information",
-	},
-	{
-		name: ["fetchme"],
-		action: false,
-		response: `<pre>${neofetch}</pre>`,
-		subPathStrict: [false],
-		description:
-			"fetches my information in a cool way", 
-	},
-	{
 		name: ["code"],
 		action: true,
 		response: "",
@@ -142,7 +142,6 @@ let commandList = [
 		subPathStrict: [true, { name: "log", response: "" }],
 		description: "lists my github projects",
 	},
-	
 	{
 		name: ["help"],
 		action: true,
@@ -161,14 +160,14 @@ commandList = commandList.map(item => {
 
 const fileList = [
 	{
-		name: "github",
-		link: "https://github.com/kvin-stphns",
+		name: "whoami",
+		link: "",
 		folder: false,
-		executable: false,
+		executable: true,
 	},
 	{
-		name: "src",
-		link: "https://github.com/kvin-stphns/macos-portfolio",
+		name: "fetchme",
+		link: "",
 		folder: false,
 		executable: true,
 	},
@@ -180,6 +179,36 @@ const fileList = [
 	},
 	{
 		name: "projects",
+		link: "",
+		folder: false,
+		executable: true,
+	},
+	{
+		name: "linkedin",
+		link: "https://www.linkedin.com/in/kvinstphns/",
+		folder: false,
+		executable: true,
+	},
+	{
+		name: "x",
+		link: "https://x.com/KevinSteph18155",
+		folder: false,
+		executable: true,
+	},
+	{
+		name: "github",
+		link: "https://github.com/kvin-stphns",
+		folder: false,
+		executable: true,
+	},
+	{
+		name: "src",
+		link: "https://github.com/kvin-stphns/macos-portfolio",
+		folder: false,
+		executable: true,
+	},
+	{
+		name: "code",
 		link: "",
 		folder: false,
 		executable: true,
@@ -273,6 +302,18 @@ const commands = {
 		validArgs: getArgListCd(fileList),
 	},
 	...getCommandList(commandList),
+	src: {
+		validArgs: {
+			_dir: {
+				action: { PATH: "https://github.com/kvin-stphns/macos-portfolio" },
+				response: "Opening source code repository...",
+			},
+			default: {
+				action: { PATH: "https://github.com/kvin-stphns/macos-portfolio" },
+				response: "Opening source code repository...",
+			},
+		},
+	},
 };
 
 export default commands;
