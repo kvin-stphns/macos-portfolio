@@ -77,11 +77,11 @@ let commandList = [
 		description: "view my resume",
 	},
 	{
-		name: ["X (twitter)"],
+		name: ["x", "twitter"],
 		action: true,
-		response: 'Visit: <a href="https://x.com/KevinSteph18155">X (Twitter)</a>',
+		response: 'Visit: <a href="https://x.com/KevinSteph18155">X.com/KevinSteph18155</a>',
 		subPathStrict: [false],
-		description: "checkout my X profile",
+		description: "checkout my X (twitter) profile",
 	  },
 	  {
 		name: ["github", "git",".github"],
@@ -161,25 +161,25 @@ commandList = commandList.map(item => {
 
 const fileList = [
 	{
-		name: ".github",
+		name: "github",
 		link: "https://github.com/kvin-stphns",
-		folder: true,
+		folder: false,
 		executable: false,
 	},
 	{
 		name: "src",
 		link: "https://github.com/kvin-stphns/macos-portfolio",
-		folder: true,
-		executable: false,
+		folder: false,
+		executable: true,
 	},
 	{
-		name: "resume.sh",
+		name: "resume",
 		link: "",
 		folder: false,
 		executable: true,
 	},
 	{
-		name: "projects.app",
+		name: "projects",
 		link: "",
 		folder: false,
 		executable: true,
