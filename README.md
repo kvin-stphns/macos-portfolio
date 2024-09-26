@@ -17,7 +17,7 @@ This portfolio website is a showcase of my work, skills, and interests. It is de
 - **Education**: MSc Computer Science @ University of London, Birkbeck
 - **Interests**: Web Development, Creative Coding, Software Engineering
 - **Socials**: 
-  - [X (Twitter)](https://x.com/KevinSteph18155)
+  - [X (Twitter)](https://x.com/KevDevelops)
   - [LinkedIn](https://www.linkedin.com/in/kvinstphns/)
   - [GitHub](https://github.com/kvin-stphns)
 - **Contacts**: 

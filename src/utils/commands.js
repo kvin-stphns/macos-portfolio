@@ -103,7 +103,7 @@ let commandList = [
 	{
 		name: ["x", "twitter"],
 		action: true,
-		response: 'Visit: <a href="https://x.com/KevinSteph18155">X.com/KevinSteph18155</a>',
+		response: 'Visit: <a href="https://x.com/KevDevelops">X.com/KevDevelops</a>',
 		subPathStrict: [false],
 		description: "checkout my X (twitter) profile",
 	  },
@@ -191,7 +191,7 @@ const fileList = [
 	},
 	{
 		name: "x",
-		link: "https://x.com/KevinSteph18155",
+		link: "https://x.com/KevDevelops",
 		folder: false,
 		executable: true,
 	},

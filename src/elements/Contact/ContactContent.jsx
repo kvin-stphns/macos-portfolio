@@ -72,7 +72,7 @@ const ResumeContent = () => {
 				<MainSection>
 					<li>
 						<a
-							href="https://x.com/KevinSteph18155"
+							href="https://x.com/KevDevelops"
 							target="_blank"
 							rel="noreferrer"
 						>
