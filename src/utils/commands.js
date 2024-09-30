@@ -79,10 +79,25 @@ let commandList = [
 	{
 		name: ["whoami"],
 		action: true,
-		response: "Hi there! My name is Kevin Stephens, a graduate student about to graduate with an MSc in Computer Science from the University of London, Birkbeck. I am passionate about creative coding and proficient in React, with a strong background in fullstack development, frontend development, and various web technologies including Gatsby, CRA, and Next. I have experience in digital design, prototyping, and wireframing, and I am skilled in using tools like Adobe Creative Suite, VS Code, IntelliJ, and more. I have held roles such as Chief Innovation Officer at Building Sustainable Borders, where I led website revitalization and innovation strategy, and Creative Marketing Specialist at Lighthouse Publications, where I developed digital visual assets and managed social media platforms. I am eager to apply my diverse skill set to meaningful projects and make a positive impact in the tech industry. You can find more about my work on my website, kevinstephens.dev.",
+		response: `At the Intersection of Code and Creativity 📍
+
+Hello, I'm Kevin Stephens – a fullstack developer with a designer's eye.
+
+Armed with an MSc in Computer Science from the University of London, Birkbeck, I blend technical prowess with creative flair. My toolkit includes React, Gatsby, and Next.js for frontend magic, coupled with a strong foundation in backend technologies.
+
+As a former Chief Innovation Officer, I've led digital transformations and crafted innovative web solutions. My experience as a Creative Marketing Specialist honed my skills in visual storytelling and user-centric design.
+
+I don't just write code; I architect digital experiences. From responsive web applications to intuitive user interfaces, I bring ideas to life with clean code and pixel-perfect designs.
+
+Proficient in the Adobe Creative Suite and modern development tools, I bridge the gap between form and function. Whether it's optimizing user journeys or implementing cutting-edge features, I'm driven by the challenge of creating seamless, engaging digital solutions.
+
+My passion lies in pushing the boundaries of what's possible in web development, always with an eye for design and user experience.
+
+Ready to bring your digital vision to life? Let's connect and create something extraordinary. ✨
+
+Explore my projects to see where technology meets creativity.`,
 		subPathStrict: [false],
-		description:
-			"displays my information",
+		description: "displays my information",
 	},
 	{
 		name: ["fetchme"],
