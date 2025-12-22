@@ -11,7 +11,7 @@ const Iframe = styled.iframe`
 const ResumeContent = ({ title, content }) => {
     return (
         <BodyContent>
-           <iframe src="https://drive.google.com/file/d/1BElXUUIEOLPx-94hRZL7Qz2TsRxH7yU0/preview"
+           <iframe src="https://drive.google.com/file/d/1ccw7I4yhuBjCHVqrsDDHvqEp5g1cH4nh/view?usp=sharing/preview"
            width="100%"
            height="100%"
            frameborder="0"
